@@ -10,6 +10,7 @@
     --color4: #987D9A;
     --color5: #522258;
     --color6: #E2BFD9;
+    --color7: #5222586c;
     --fuente-nerko: "Inter", sans serif;
     --fuente-cod: "Inconsolata", sans serif;
 }
@@ -31,7 +32,7 @@
 .cuerpo{
     display: flex;
     background-color: var(--color1);
-    padding: 3% 0% 0% 0%;
+    padding: 4%;
     justify-content: space-between;
     gap: 5%;
     height: 85vh;
@@ -139,7 +140,9 @@
 /* Botones */
     .botones_juntos{
         display: flex;
-        margin-top: 18px;   
+        margin-top: 18px; 
+        justify-content: space-between;
+        gap: 4%;  
     }
 
     .boton-enc{
@@ -151,6 +154,16 @@
         height: 67px;
         width: 50%;
         font-size: 1.5rem;
+    }
+
+    .boton-enc:hover{
+        background-color: var(--color6);
+        color: var(--color5);
+    }
+
+    .boton-des:hover{
+        background-color: var(--color6);
+        color: var(--color1);
     }
 
     .boton-des{
