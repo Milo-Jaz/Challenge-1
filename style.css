@@ -1,0 +1,208 @@
+/* Fuente importada 'Inter'*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nerko+One&display=swap');
+
+:root{
+    --color1: #ffffff;
+    --color2: #ffdff568;
+    --color3: #BB9AB1;
+    --color4: #987D9A;
+    --color5: #522258;
+    --color6: #E2BFD9;
+    --fuente-nerko: "Inter", sans serif;
+    --fuente-cod: "Inconsolata", sans serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    padding: 2% 0% 0% 2% ;
+    height: 1vh;
+}
+
+.logo_alura{
+   padding-top: 0.8rem;
+   margin-left: 0.4rem;
+   width: 7%; 
+}
+
+.cuerpo{
+    display: flex;
+    background-color: var(--color1);
+    line-height: 190%;
+    padding: 3% 6%;
+    justify-content: space-between;
+    gap: 5%;
+    height: 80vh;
+}
+
+.Izquierda{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.Derecha{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+
+
+/* Formato ingreso de texto */
+    .texto_ingresado{
+        border: none;
+        color: var(--color5);
+        margin-top: 50px;
+        text-transform: lowercase;
+        font-size: 2rem;
+        resize: none;
+    }
+
+    ::placeholder{
+        color: var(--color4);
+    }
+    .texto_ingresado:focus{
+        outline: none;
+    }
+
+/* Resultado de la encriptación */
+    .mensaje_resultado{
+        background: var(--color2);
+        background-image: url("/asset/Muñeco\ \(1\).png");
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+        background-size: 50% 40%;
+        border: none;
+        border-radius: 24px;
+        color: var(--color3);
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem;
+        box-sizing: border-box;   
+        text-align: center;    
+        font-family: var(--fuente-cod);
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .mensaje_resultado_p{
+        margin: 0;
+        padding-bottom: 8rem;
+    }
+
+    .mensaje_resultado_2{
+        background: var(--color2);
+        border: none;
+        border-radius: 24px;
+        color: var(--color5);
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        box-sizing: border-box;   
+        text-align: center;    
+        font-family: var(--fuente-cod);
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+/* Botones */
+    .botones_juntos{
+        display: flex;
+        margin-top: 18px;   
+    }
+
+    .boton-enc{
+        background: var(--color3);
+        border: 1px solid var(--color5);
+        border-radius: 24px;
+        color: var(--color1);
+        cursor: pointer;
+        height: 67px;
+        width: 328px;
+        font-size: 1.5rem;
+    }
+
+    .boton-des{
+        background: var(--color2);
+        border: 1px solid var(--color5);
+        border-radius: 24px;
+        color: var(--color5);
+        cursor: pointer;
+        height: 67px;
+        width: 328px;
+        margin-left: 30px;
+        font-size: 1.5rem;
+    }
+
+    .copiar{
+        background: var(--color1);
+        border: 1px solid var(--color5);
+        border-radius: 24px;
+        color: var(--color5);
+        cursor: pointer;
+        height: 67px;
+        width: 60%;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+    }
+
+/* Mensaje informativo*/
+    .mensaje_informativo_signo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .circle {
+        display: inline-block;
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        background-color: var(--color5);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        line-height: 30px;
+        font-size: 1.5rem;
+    }
+
+    .mensaje_informativo{
+        color: var(--color3);
+        font-size: 1.2rem;
+        font-family: var(--fuente-nerko);
+        font-weight: 400;
+    }
+
+.footer{
+    background-color: var(--color2);
+    padding: 0.6rem;
+    color: var(--color4);
+    text-align: center;
+    font-family: var(--fuente-cod);
+    font-weight: 400;
+    font-size: 1.2rem;
+}

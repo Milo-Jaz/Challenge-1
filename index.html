@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo_alura" src="./asset/Logo (2).png" alt="Logo de Alura">
+    </header>
+
+    <main class="cuerpo">
+        <!-- Este será la parte izquierda de la pantalla (ingrese el texto y botones)-->
+        <section class="Izquierda">
+            <textarea class="texto_ingresado" cols="30" rows="15" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="mensaje_informativo_signo"> 
+                <span class="circle">!</span>
+                <h6 class="mensaje_informativo"> Solo letras minúsculas y sin acentos </h6>
+            </div>
+            <div class="botones_juntos">
+                <button class="boton-enc" onclick="btnEncriptar()"> Encriptar </button>
+                <button class="boton-des" onclick="btnDesencriptar()"> Desencriptar </button>
+            </div>            
+        </section>
+        <!-- Este será la parte derecha de la pantalla (Cuadro blanco, resultado de encriptación)-->
+        <section class="Derecha">
+            <div class="mensaje_resultado"> 
+               <p class="mensaje_resultado_p"> Ningún mensaje fue encontrado </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p> Desarrollado por Rubi Portuguez Agosto 2024 </p>
+    </footer>
+<script src="challenge.js"></script>
+</body>
+</html>
