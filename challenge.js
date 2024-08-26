@@ -2,10 +2,18 @@ const textArea = document.querySelector(".texto_ingresado");
 //const mensaje = document.querySelector(".mensaje_resultado_p");
 const seccionDerecha = document.querySelector(".Derecha");
 
-// Función eliminar acento 
+// Función eliminar acento y caracteres especiales
 function eliminarAcentos(texto) {
-    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    texto = texto.replace(/[^a-z\s]/g, ""); 
+    return texto
 }
+
+// Validar la entrada del usuario en tiempo real
+textArea.addEventListener("input", function() {
+    const textoLimpio = eliminarAcentos(textArea.value);
+    textArea.value = textoLimpio;
+});
 
 //La letra "e" es convertida para "enter"
 //La letra "i" es convertida para "imes"
