@@ -1,5 +1,4 @@
 const textArea = document.querySelector(".texto_ingresado");
-//const mensaje = document.querySelector(".mensaje_resultado_p");
 const seccionDerecha = document.querySelector(".Derecha");
 
 // Función eliminar acento y caracteres especiales
@@ -15,25 +14,33 @@ textArea.addEventListener("input", function() {
     textArea.value = textoLimpio;
 });
 
-//La letra "e" es convertida para "enter"
-//La letra "i" es convertida para "imes"
-//La letra "a" es convertida para "ai"
-//La letra "o" es convertida para "ober"
-//La letra "u" es convertida para "ufat" 
-
 // Función para encriptar el texto
 function btnEncriptar(){
+    if(textArea.value.trim() === ""){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Campo vacío',
+            text: 'Por favor ingrese un texto para encriptar',
+        });
+        return;
+    }
     let textoSinAcentos = eliminarAcentos(textArea.value)
     const textoEncriptado = encriptar(textoSinAcentos);
-    //mensaje.textContent = textoEncriptado;
     cambiarDiseno(textoEncriptado);
 }
 
 // Función para encriptar el texto
 function btnDesencriptar(){
+    if(textArea.value.trim() === ""){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Campo vacío',
+            text: 'Por favor ingrese un texto para desencriptar',
+        });
+        return;
+    }
     let textoSinAcentos = eliminarAcentos(textArea.value)
-    const textoDesencriptado = desencriptar(textArea.value);
-    //mensaje.textContent = textoEncriptado;
+    const textoDesencriptado = desencriptar(textoSinAcentos);
     cambiarDiseno(textoDesencriptado);
 }
 
@@ -79,7 +86,11 @@ function cambiarDiseno(textoResultado){
 // Función para copiar el texto
 function copiarTexto(texto) {
     navigator.clipboard.writeText(texto).then(() => {
-        alert("Texto copiado al portapapeles");
+        Swal.fire({
+            icon: 'success',
+            text: 'Texto copiado al portapapeles',
+        });
+        return;
     }).catch(err => {
         console.error("Error al copiar el texto", err);
     });
