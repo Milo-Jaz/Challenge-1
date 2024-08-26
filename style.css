@@ -82,7 +82,7 @@
 /* Resultado de la encriptación */
     .mensaje_resultado{
         background: var(--color2);
-        background-image: url("../asset/Muñeco (1).png");
+        background-image: url("/asset/Muñeco (1).png");
         background-repeat: no-repeat;
         background-position: 50% 20%;
         background-size: 50% 40%;
